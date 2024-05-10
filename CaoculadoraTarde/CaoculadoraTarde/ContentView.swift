@@ -12,30 +12,32 @@ struct ContentView: View {
     @State var years: Int?
     @State var months: Int?
     @State var result: Int?
-    let portes = ["Pequeno", "Médio", "Grande"]
-    @State var porte: String = "Pequeno"
+    @State var porteSelecionado: Porte = .pequeno
 
     var body: some View {
         VStack(alignment: .leading) {
             Text("Qual a idade do seu cão?")
-                .font(.system(size: 24))
+                .font(.header5)
             Text("Anos")
+                .font(.body1)
             TextField(
                 "Quantos anos completos seu cão tem.",
                 value: $years,
                 format: .number
             )
             Text("Meses")
+                .font(.body1)
             TextField(
                 "E quantos meses além disso ele tem.",
                 value: $months,
                 format: .number
             )
             Text("Porte")
+                .font(.body1)
 
-            Picker("Porte", selection: $porte) {
-                ForEach(portes, id: \.self) { porte in
-                    Text(porte)
+            Picker("Porte", selection: $porteSelecionado) {
+                ForEach(Porte.allCases, id: \.self) { porte in
+                    Text(porte.rawValue)
                         .tag(porte)
                 }
             }
@@ -47,7 +49,9 @@ struct ContentView: View {
 
             if let result {
                 Text("Seu cachorro tem, em idade humana...")
+                    .font(.body1)
                 Text("\(result) anos")
+                    .font(.display)
             } else {
                 Image(ImageResource.clarinha)
                     .resizable()
@@ -63,6 +67,7 @@ struct ContentView: View {
                     Color.purple
                     Text("Cãocular")
                         .foregroundStyle(.white)
+                        .font(.body1)
                 }
             })
             .cornerRadius(10)
@@ -88,7 +93,10 @@ struct ContentView: View {
             return
         }
 
-        result = years * 7 + months*7/12
+        result = porteSelecionado.conversaoDeIdade(
+            anos: years,
+            meses: months
+        )
 
     }
 }
