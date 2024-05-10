@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var years: Int? = nil
-    @State var months: Int? = nil
+    @State var years: Int?
+    @State var months: Int?
     @State var result: Int?
     let portes = ["Pequeno", "Médio", "Grande"]
     @State var porte: String = "Pequeno"
