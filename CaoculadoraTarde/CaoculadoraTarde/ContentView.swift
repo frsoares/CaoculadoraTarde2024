@@ -13,6 +13,10 @@ struct ContentView: View {
     @State var months: Int?
     @State var result: Int?
     @State var porteSelecionado: Porte = .pequeno
+    @State var failedInput = false
+    let tituloPreencherCampos = "Preencha os campos para poder cãocular!"
+    @State var zeroInput = false
+    let tituloCamposZero = "Algum dos campos precisa ter valor maior que zero!"
 
     var body: some View {
         NavigationStack {
@@ -62,6 +66,7 @@ struct ContentView: View {
                             .font(.body1)
                             .frame(maxWidth: .infinity)
                         Text("\(result) anos")
+                            .contentTransition(.numericText())
                             .font(.display)
                             .frame(maxWidth: .infinity)
                     } else {
@@ -95,7 +100,14 @@ struct ContentView: View {
                 .toolbarBackground(.visible, for: .navigationBar)
                 .toolbarBackground(.indigo600, for: .navigationBar)
                 .toolbarColorScheme(.dark, for: .navigationBar, .tabBar)
+                .alert(tituloPreencherCampos, isPresented: $failedInput) {
+                    Button("OK", role: .cancel, action: {})
+                }
+                .alert(tituloCamposZero, isPresented: $zeroInput) {
+                    Button("OK", role: .cancel, action: {})
+                }
             }
+            .animation(.easeOut, value: result)
             .scrollDismissesKeyboard(.immediately)
         }
     }
@@ -106,10 +118,12 @@ struct ContentView: View {
             let months
         else {
             print("preencha o campo de entrada")
+            failedInput = true
             return
         }
         guard years > 0 || months > 0 else {
             print("algum campo tem que ter valor maior que zero")
+            zeroInput = true
             return
         }
 
