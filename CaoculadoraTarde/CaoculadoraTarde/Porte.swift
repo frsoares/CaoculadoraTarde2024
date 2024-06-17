@@ -24,7 +24,7 @@ enum Porte: String, CaseIterable {
             multiplicador = 8
         }
 
-        result = anos * multiplicador + meses * multiplicador / 12
+        result = anos * multiplicador + meses * multiplicador / 24
 
         return result
     }
