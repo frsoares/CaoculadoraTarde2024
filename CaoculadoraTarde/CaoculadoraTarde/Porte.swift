@@ -16,12 +16,12 @@ enum Porte: String, CaseIterable {
         let result: Int
         let multiplicador: Int
         switch self {
-        case .small:
-            multiplicador = 1
-        case .medium:
-            multiplicador = 2
-        case .big:
-            multiplicador = 3
+            case .small:
+                multiplicador = 2
+            case .medium:
+                multiplicador = 4
+            case .big:
+                multiplicador = 6
         }
 
         result = anos * multiplicador + meses * multiplicador / 12
