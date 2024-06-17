@@ -8,21 +8,22 @@
 import Foundation
 
 enum Porte: String, CaseIterable {
-    case pequeno = "Pequeno"
-    case médio = "Médio"
-    case grande = "Grande"
+    case small = "Pequeno"
+    case medium = "Médio"
+    case large = "Grande"
 
     func conversaoDeIdade(anos: Int, meses: Int) -> Int {
         let result: Int
         let multiplicador: Int
         switch self {
-        case .pequeno:
+        case .small:
             multiplicador = 6
-        case .médio:
+        case .medium:
             multiplicador = 7
-        case .grande:
+        case .large:
             multiplicador = 8
         }
+
 
         result = anos * multiplicador + meses * multiplicador / 24
 
