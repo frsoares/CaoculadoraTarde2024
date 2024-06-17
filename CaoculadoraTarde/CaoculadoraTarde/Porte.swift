@@ -12,9 +12,14 @@ enum Porte: String, CaseIterable {
     case medium = "Médio"
     case big = "Grande"
 
-    func conversaoDeIdade(anos: Int, meses: Int) -> Int {
+    func conversaoDeIdade(
+        anos: Int,
+        meses: Int
+    ) -> Int {
+        
         let result: Int
         let multiplicador: Int
+        
         switch self {
         case .small:
             multiplicador = 1
@@ -22,6 +27,7 @@ enum Porte: String, CaseIterable {
             multiplicador = 2
         case .big:
             multiplicador = 3
+
         }
 
         result = anos * multiplicador + meses * multiplicador / 24
