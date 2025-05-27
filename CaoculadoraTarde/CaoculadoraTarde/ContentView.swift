@@ -6,17 +6,26 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
 
     @State var years: Int?
     @State var months: Int?
-    @State var result: Int?
+    @State var result: Int? {
+        didSet {
+            defaults?.set(result, forKey: "calculo")
+
+            WidgetCenter.shared.reloadTimelines(ofKind: "UltimoCalculoWidget")
+        }
+    }
     @State var porteSelecionado: Porte = .pequeno
     @State var failedInput = false
     let tituloPreencherCampos = "Preencha os campos para poder cãocular!"
     @State var zeroInput = false
     let tituloCamposZero = "Algum dos campos precisa ter valor maior que zero!"
+
+    let defaults = UserDefaults(suiteName: "group.br.ufpe.cin.fmssn.CaoculadoraTarde")
 
     var body: some View {
         NavigationStack {
