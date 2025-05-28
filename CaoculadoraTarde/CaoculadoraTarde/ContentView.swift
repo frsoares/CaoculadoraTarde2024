@@ -6,12 +6,22 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct ContentView: View {
 
+    let defaults = UserDefaults(
+        suiteName: "group.br.ufpe.cin.fmssn.CaoculadoraTarde"
+    )
+
     @State var years: Int?
     @State var months: Int?
-    @State var result: Int?
+    @State var result: Int? {
+        didSet {
+            defaults?.set(result, forKey: "resultado")
+            WidgetCenter.shared.reloadAllTimelines()
+        }
+    }
     @State var porteSelecionado: Porte = .pequeno
     @State var failedInput = false
     let tituloPreencherCampos = "Preencha os campos para poder cãocular!"

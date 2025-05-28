@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB244F3C2DE63CE800460B5A /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB244F3B2DE63CE800460B5A /* WidgetKit.framework */; };
+		DB244F3E2DE63CE800460B5A /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB244F3D2DE63CE800460B5A /* SwiftUI.framework */; };
+		DB244F492DE63CEB00460B5A /* UltimoCalculoWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DB244F392DE63CE800460B5A /* UltimoCalculoWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DB89E9CA2BEAB2000066991A /* CaoculadoraTardeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB89E9C92BEAB2000066991A /* CaoculadoraTardeApp.swift */; };
 		DB89E9CC2BEAB2000066991A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB89E9CB2BEAB2000066991A /* ContentView.swift */; };
 		DB89E9CE2BEAB2010066991A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB89E9CD2BEAB2010066991A /* Assets.xcassets */; };
@@ -15,7 +18,36 @@
 		DBA628D12BEEAFDC00C7BD40 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA628D02BEEAFDC00C7BD40 /* StyleGuide.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DB244F472DE63CEB00460B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB89E9BE2BEAB1FF0066991A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB244F382DE63CE800460B5A;
+			remoteInfo = UltimoCalculoWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DB244F4A2DE63CEB00460B5A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DB244F492DE63CEB00460B5A /* UltimoCalculoWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DB244F392DE63CE800460B5A /* UltimoCalculoWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = UltimoCalculoWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB244F3B2DE63CE800460B5A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		DB244F3D2DE63CE800460B5A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		DB244F4F2DE646A900460B5A /* CaoculadoraTarde.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CaoculadoraTarde.entitlements; sourceTree = "<group>"; };
+		DB244F502DE6475700460B5A /* UltimoCalculoWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UltimoCalculoWidgetExtension.entitlements; sourceTree = "<group>"; };
 		DB89E9C62BEAB2000066991A /* CaoculadoraTarde.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaoculadoraTarde.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB89E9C92BEAB2000066991A /* CaoculadoraTardeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaoculadoraTardeApp.swift; sourceTree = "<group>"; };
 		DB89E9CB2BEAB2000066991A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -25,7 +57,30 @@
 		DBA628D02BEEAFDC00C7BD40 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		DB244F4D2DE63CEB00460B5A /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DB244F382DE63CE800460B5A /* UltimoCalculoWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		DB244F3F2DE63CE800460B5A /* UltimoCalculoWidget */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (DB244F4D2DE63CEB00460B5A /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = UltimoCalculoWidget; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		DB244F362DE63CE800460B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB244F3E2DE63CE800460B5A /* SwiftUI.framework in Frameworks */,
+				DB244F3C2DE63CE800460B5A /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB89E9C32BEAB1FF0066991A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -36,10 +91,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB244F3A2DE63CE800460B5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB244F3B2DE63CE800460B5A /* WidgetKit.framework */,
+				DB244F3D2DE63CE800460B5A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DB89E9BD2BEAB1FF0066991A = {
 			isa = PBXGroup;
 			children = (
+				DB244F502DE6475700460B5A /* UltimoCalculoWidgetExtension.entitlements */,
 				DB89E9C82BEAB2000066991A /* CaoculadoraTarde */,
+				DB244F3F2DE63CE800460B5A /* UltimoCalculoWidget */,
+				DB244F3A2DE63CE800460B5A /* Frameworks */,
 				DB89E9C72BEAB2000066991A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				DB89E9C62BEAB2000066991A /* CaoculadoraTarde.app */,
+				DB244F392DE63CE800460B5A /* UltimoCalculoWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,6 +123,7 @@
 		DB89E9C82BEAB2000066991A /* CaoculadoraTarde */ = {
 			isa = PBXGroup;
 			children = (
+				DB244F4F2DE646A900460B5A /* CaoculadoraTarde.entitlements */,
 				DB89E9C92BEAB2000066991A /* CaoculadoraTardeApp.swift */,
 				DB89E9CB2BEAB2000066991A /* ContentView.swift */,
 				DB89E9EC2BEE9D570066991A /* Porte.swift */,
@@ -76,6 +145,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DB244F382DE63CE800460B5A /* UltimoCalculoWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB244F4E2DE63CEB00460B5A /* Build configuration list for PBXNativeTarget "UltimoCalculoWidgetExtension" */;
+			buildPhases = (
+				DB244F352DE63CE800460B5A /* Sources */,
+				DB244F362DE63CE800460B5A /* Frameworks */,
+				DB244F372DE63CE800460B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DB244F3F2DE63CE800460B5A /* UltimoCalculoWidget */,
+			);
+			name = UltimoCalculoWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = UltimoCalculoWidgetExtension;
+			productReference = DB244F392DE63CE800460B5A /* UltimoCalculoWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		DB89E9C52BEAB1FF0066991A /* CaoculadoraTarde */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB89E9D42BEAB2010066991A /* Build configuration list for PBXNativeTarget "CaoculadoraTarde" */;
@@ -83,10 +174,12 @@
 				DB89E9C22BEAB1FF0066991A /* Sources */,
 				DB89E9C32BEAB1FF0066991A /* Frameworks */,
 				DB89E9C42BEAB1FF0066991A /* Resources */,
+				DB244F4A2DE63CEB00460B5A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DB244F482DE63CEB00460B5A /* PBXTargetDependency */,
 			);
 			name = CaoculadoraTarde;
 			productName = CaoculadoraTarde;
@@ -100,9 +193,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1630;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					DB244F382DE63CE800460B5A = {
+						CreatedOnToolsVersion = 16.3;
+					};
 					DB89E9C52BEAB1FF0066991A = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -122,11 +218,19 @@
 			projectRoot = "";
 			targets = (
 				DB89E9C52BEAB1FF0066991A /* CaoculadoraTarde */,
+				DB244F382DE63CE800460B5A /* UltimoCalculoWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DB244F372DE63CE800460B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB89E9C42BEAB1FF0066991A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -139,6 +243,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DB244F352DE63CE800460B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB89E9C22BEAB1FF0066991A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,7 +263,73 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DB244F482DE63CEB00460B5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB244F382DE63CE800460B5A /* UltimoCalculoWidgetExtension */;
+			targetProxy = DB244F472DE63CEB00460B5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		DB244F4B2DE63CEB00460B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = UltimoCalculoWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3AMBC8TS93;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UltimoCalculoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UltimoCalculoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.fmssn.CaoculadoraTarde.UltimoCalculoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DB244F4C2DE63CEB00460B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = UltimoCalculoWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3AMBC8TS93;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = UltimoCalculoWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = UltimoCalculoWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.ufpe.cin.fmssn.CaoculadoraTarde.UltimoCalculoWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		DB89E9D22BEAB2010066991A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -277,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CaoculadoraTarde/CaoculadoraTarde.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaoculadoraTarde/Preview Content\"";
@@ -306,6 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CaoculadoraTarde/CaoculadoraTarde.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaoculadoraTarde/Preview Content\"";
@@ -333,6 +512,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DB244F4E2DE63CEB00460B5A /* Build configuration list for PBXNativeTarget "UltimoCalculoWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB244F4B2DE63CEB00460B5A /* Debug */,
+				DB244F4C2DE63CEB00460B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DB89E9C12BEAB1FF0066991A /* Build configuration list for PBXProject "CaoculadoraTarde" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
