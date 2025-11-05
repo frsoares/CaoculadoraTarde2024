@@ -134,6 +134,7 @@ struct ContentView: View {
         })
         .cornerRadius(10)
         .frame(height: 50)
+        .glassify()
     }
 
     func processYears() {

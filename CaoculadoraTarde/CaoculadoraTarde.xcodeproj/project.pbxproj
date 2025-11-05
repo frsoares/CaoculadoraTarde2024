@@ -13,6 +13,7 @@
 		DB89E9D12BEAB2010066991A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB89E9D02BEAB2010066991A /* Preview Assets.xcassets */; };
 		DB89E9ED2BEE9D570066991A /* Porte.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB89E9EC2BEE9D570066991A /* Porte.swift */; };
 		DBA628D12BEEAFDC00C7BD40 /* StyleGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA628D02BEEAFDC00C7BD40 /* StyleGuide.swift */; };
+		DBC5183A2EBBA58C00979B2F /* View+glassify.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC518392EBBA58C00979B2F /* View+glassify.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		DB89E9D02BEAB2010066991A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB89E9EC2BEE9D570066991A /* Porte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Porte.swift; sourceTree = "<group>"; };
 		DBA628D02BEEAFDC00C7BD40 /* StyleGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleGuide.swift; sourceTree = "<group>"; };
+		DBC518392EBBA58C00979B2F /* View+glassify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+glassify.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				DB89E9C92BEAB2000066991A /* CaoculadoraTardeApp.swift */,
 				DB89E9CB2BEAB2000066991A /* ContentView.swift */,
+				DBC518392EBBA58C00979B2F /* View+glassify.swift */,
 				DB89E9EC2BEE9D570066991A /* Porte.swift */,
 				DBA628D02BEEAFDC00C7BD40 /* StyleGuide.swift */,
 				DB89E9CD2BEAB2010066991A /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC5183A2EBBA58C00979B2F /* View+glassify.swift in Sources */,
 				DB89E9CC2BEAB2000066991A /* ContentView.swift in Sources */,
 				DB89E9ED2BEE9D570066991A /* Porte.swift in Sources */,
 				DBA628D12BEEAFDC00C7BD40 /* StyleGuide.swift in Sources */,
