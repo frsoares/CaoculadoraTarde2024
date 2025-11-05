@@ -25,70 +25,20 @@ struct ContentView: View {
                     Text("Qual a idade do seu cão?")
                         .font(.header5)
                         .padding(.top, 24)
-                    VStack(alignment: .leading, spacing: 8.0) {
-                        Text("Anos")
-                            .font(.body1)
-                        TextField(
-                            "Quantos anos completos seu cão tem.",
-                            value: $years,
-                            format: .number
-                        )
-                    }
-                    VStack(alignment: .leading, spacing: 8.0) {
 
-                        Text("Meses")
-                            .font(.body1)
-                        TextField(
-                            "E quantos meses além disso ele tem.",
-                            value: $months,
-                            format: .number
-                        )
-                    }
-                    VStack(alignment: .leading, spacing: 8.0) {
+                    yearsField
+                    monthsField
+                    sizeSegments
 
-                        Text("Porte")
-                            .font(.body1)
-
-                        Picker("Porte", selection: $porteSelecionado) {
-                            ForEach(Porte.allCases, id: \.self) { porte in
-                                Text(porte.rawValue)
-                                    .tag(porte)
-                            }
-                        }
-                        .pickerStyle(.segmented)
-                    }
                     Divider()
                         .background(.purple)
                     Spacer()
 
-                    if let result {
-                        Text("Seu cachorro tem, em idade humana...")
-                            .font(.body1)
-                            .frame(maxWidth: .infinity)
-                        Text("\(result) anos")
-                            .contentTransition(.numericText())
-                            .font(.display)
-                            .frame(maxWidth: .infinity)
-                    } else {
-                        Image(ImageResource.clarinha)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxHeight: 150)
-                            .frame(maxWidth: .infinity)
-                            .shadow(radius: 20)
-                    }
+                    resultView
 
                     Spacer()
-                    Button(action: processYears, label: {
-                        ZStack {
-                            Color.indigo600
-                            Text("Cãocular")
-                                .foregroundStyle(.white)
-                                .font(.body1)
-                        }
-                    })
-                    .cornerRadius(10)
-                    .frame(height: 50)
+
+                    processButton
                 }
                 .containerRelativeFrame(.vertical)
                 .textFieldStyle(.roundedBorder)
@@ -110,6 +60,80 @@ struct ContentView: View {
             .animation(.easeOut, value: result)
             .scrollDismissesKeyboard(.immediately)
         }
+    }
+
+    var yearsField: some View {
+        VStack(alignment: .leading, spacing: 8.0) {
+            Text("Anos")
+                .font(.body1)
+            TextField(
+                "Quantos anos completos seu cão tem.",
+                value: $years,
+                format: .number
+            )
+        }
+    }
+
+    var monthsField: some View {
+        VStack(alignment: .leading, spacing: 8.0) {
+
+            Text("Meses")
+                .font(.body1)
+            TextField(
+                "E quantos meses além disso ele tem.",
+                value: $months,
+                format: .number
+            )
+        }
+    }
+
+    var sizeSegments: some View {
+        VStack(alignment: .leading, spacing: 8.0) {
+
+            Text("Porte")
+                .font(.body1)
+
+            Picker("Porte", selection: $porteSelecionado) {
+                ForEach(Porte.allCases, id: \.self) { porte in
+                    Text(porte.rawValue)
+                        .tag(porte)
+                }
+            }
+            .pickerStyle(.segmented)
+        }
+    }
+
+    @ViewBuilder
+    var resultView: some View {
+        if let result {
+            Text("Seu cachorro tem, em idade humana...")
+                .font(.body1)
+                .frame(maxWidth: .infinity)
+            Text("\(result) anos")
+                .contentTransition(.numericText())
+                .font(.display)
+                .frame(maxWidth: .infinity)
+        } else {
+            Image(ImageResource.clarinha)
+                .resizable()
+                .scaledToFit()
+                .frame(maxHeight: 150)
+                .frame(maxWidth: .infinity)
+                .shadow(radius: 20)
+        }
+    }
+
+    var processButton: some View {
+        Button(action: processYears, label: {
+            ZStack {
+                Color.indigo600
+                Text("Cãocular")
+                    .foregroundStyle(.white)
+                    .font(.body1)
+            }
+        })
+        .cornerRadius(10)
+        .frame(height: 50)
     }
 
     func processYears() {
